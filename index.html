@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="P&P Compured — Servicios tecnológicos profesionales: reparación, mantenimiento y repotenciación de equipos, diseño web y chatbots con IA.">
+  <title>P&amp;P Compured | Servicios Tecnológicos Profesionales</title>
+
+  <!-- ── Favicon ── -->
+  <link rel="icon" type="image/png" href="assets/images/logo-pp.png">
+  <link rel="shortcut icon" href="assets/images/logo-pp.png">
+  <link rel="apple-touch-icon" href="assets/images/logo-pp.png">
+
+  <!-- ── Fuentes ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- ── Iconos ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ── Estilos — orden importante: base → componentes → responsive ── -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+  <link rel="stylesheet" href="assets/css/carousel.css">
+  <link rel="stylesheet" href="assets/css/stats.css">
+  <link rel="stylesheet" href="assets/css/services.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <link rel="stylesheet" href="assets/css/testimonials.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
+</head>
+<body>
+
+<!-- Partículas de fondo -->
+<div class="ptcl" id="ptcl"></div>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#inicio" class="logo">
+      <svg viewBox="130 45 260 105" xmlns="http://www.w3.org/2000/svg" style="height:50px;width:auto">
+        <text x="260" y="92" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="42" font-weight="700">
+          <tspan fill="#7a4a00">$ </tspan><tspan fill="#f5a623">&lt;P&amp;P/&gt;</tspan>
+        </text>
+        <rect x="362" y="61" width="13" height="29" fill="#f5a623">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </rect>
+        <text x="260" y="136" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="20">
+          <tspan fill="#8a2060">// </tspan><tspan fill="#ff4db8" letter-spacing="3">COMPURED</tspan>
+        </text>
+      </svg>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-act">
+      <a href="#contacto" class="btn btn-p"><i class="fas fa-paper-plane"></i> Solicitar Servicio</a>
+      <button class="nav-tog" id="tog"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil -->
+<div class="mob-nav" id="mnav">
+  <a href="#inicio"      onclick="cm()">Inicio</a>
+  <a href="#servicios"   onclick="cm()">Servicios</a>
+  <a href="#portfolio"   onclick="cm()">Portfolio</a>
+  <a href="#testimonios" onclick="cm()">Testimonios</a>
+  <a href="#contacto"    onclick="cm()">Contacto</a>
+  <a href="#contacto" class="btn btn-p" style="margin-top:6px;justify-content:center" onclick="cm()">
+    <i class="fas fa-paper-plane"></i> Solicitar Servicio
+  </a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-grid"></div>
+  <div class="hero-orb1"></div>
+  <div class="hero-orb2"></div>
+  <div class="hero-body">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+
+      <!-- Perfil -->
+      <div class="sb-card profile rev-l">
+        <div class="avatar" style="background:#fff">
+          <img src="assets/images/logo-pp.png"
+               alt="P&P Compured"
+               style="width:76px;height:76px;border-radius:50%;object-fit:contain;padding:5px;position:relative;z-index:1">
+        </div>
+        <div class="status-badge"><span class="status-dot"></span> Disponible Ahora</div>
+        <div class="prof-name">P&amp;P Compured</div>
+        <div class="prof-role">Expertos en Tecnología &amp; Desarrollo Web</div>
+        <div class="stats-row">
+          <div><div class="st-n">10+</div><div class="st-l">Años Exp.</div></div>
+          <div><div class="st-n">100+</div><div class="st-l">Clientes</div></div>
+          <div><div class="st-n">500+</div><div class="st-l">Proyectos</div></div>
+        </div>
+      </div>
+
+      <!-- Habilidades -->
+      <div class="sb-card rev-l d1">
+        <h4><i class="fas fa-chart-line"></i> Especialidades</h4>
+        <div class="sk-item">
+          <div class="sk-hd"><span>Reparación de PC</span><span>98%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="98"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-hd"><span>Diseño Web</span><span>95%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="95"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-hd"><span>Chatbots / IA</span><span>92%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="92"></div></div>
+        </div>
+        <div class="sk-item">
+          <div class="sk-hd"><span>Mantenimiento</span><span>99%</span></div>
+          <div class="sk-bar"><div class="sk-fill" data-w="99"></div></div>
+        </div>
+      </div>
+
+      <!-- Lista de servicios -->
+      <div class="sb-card rev-l d2">
+        <h4><i class="fas fa-list-check"></i> Mis Servicios</h4>
+        <div class="svc-li"><span class="ico"><i class="fas fa-tools"></i></span>Reparación de Equipos</div>
+        <div class="svc-li"><span class="ico"><i class="fas fa-bolt"></i></span>Repotenciación</div>
+        <div class="svc-li"><span class="ico"><i class="fas fa-shield-halved"></i></span>Mantenimiento Preventivo</div>
+        <div class="svc-li"><span class="ico"><i class="fas fa-globe"></i></span>Diseño Web</div>
+        <div class="svc-li"><span class="ico"><i class="fas fa-robot"></i></span>Chatbots con IA</div>
+        <div class="svc-li"><span class="ico"><i class="fas fa-camera"></i></span>Cámaras de Seguridad</div>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="sb-card rev-l d3" style="text-align:center">
+        <h4 style="justify-content:center"><i class="fas fa-share-nodes"></i> Redes Sociales</h4>
+        <div class="soc-row">
+          <a href="https://wa.me/56966870240" target="_blank" rel="noopener noreferrer" class="soc-a"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="soc-a"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-a"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="soc-a"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="soc-a"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── CONTENIDO PRINCIPAL ── -->
+    <div class="hero-main">
+
+      <!-- Texto del hero -->
+      <div class="hero-txt rev">
+        <div class="hero-tag"><i class="fas fa-circle-check"></i> Servicios Tecnológicos Profesionales</div>
+        <h1 class="hero-h">
+          Soluciones Tech que<br>
+          <span class="grad-txt" id="typing">Transforman</span><br>
+          tu Negocio
+        </h1>
+        <p class="hero-sub">
+          Reparación · Mantenimiento · Repotenciación de equipos.
+          Diseño web moderno y chatbots inteligentes con IA.
+          Todo en un solo lugar y con garantía.
+        </p>
+        <div class="hero-btns">
+          <a href="#servicios" class="btn btn-p"><i class="fas fa-rocket"></i> Ver Servicios</a>
+          <a href="#portfolio"  class="btn btn-o"><i class="fas fa-eye"></i> Ver Trabajos</a>
+        </div>
+      </div>
+
+      <!-- Carrusel -->
+      <div class="car-wrap rev d2">
+        <div class="car-track" id="cTrack">
+
+          <!-- Slide 1 — Reparación -->
+          <div class="car-slide s1">
+            <div class="bg"></div>
+            <div class="orb" style="width:180px;height:180px;background:rgba(0,198,255,.15);top:-40px;right:-40px"></div>
+            <div class="slide-con">
+              <i class="s-ico fas fa-laptop-medical"></i>
+              <h3 class="s-ttl">Reparación de Equipos</h3>
+              <p class="s-dsc">Diagnóstico profesional y reparación de laptops, PCs y computadoras de todas las marcas con garantía en el servicio.</p>
+              <span class="s-badge"><i class="fas fa-clock"></i> Entrega en 24–48 horas</span>
+            </div>
+          </div>
+
+          <!-- Slide 2 — Diseño Web -->
+          <div class="car-slide s2">
+            <div class="bg"></div>
+            <div class="orb" style="width:180px;height:180px;background:rgba(168,85,247,.15);top:-40px;left:-40px"></div>
+            <div class="slide-con">
+              <i class="s-ico fas fa-code"></i>
+              <h3 class="s-ttl">Diseño de Páginas Web</h3>
+              <p class="s-dsc">Sitios web modernos, responsivos y optimizados para SEO. Desde landing pages hasta plataformas e-commerce completas.</p>
+              <span class="s-badge"><i class="fas fa-star"></i> Diseño Premium Personalizado</span>
+            </div>
+          </div>
+
+          <!-- Slide 3 — Chatbots -->
+          <div class="car-slide s3">
+            <div class="bg"></div>
+            <div class="orb" style="width:160px;height:160px;background:rgba(0,245,160,.12);bottom:-30px;right:-30px"></div>
+            <div class="slide-con">
+              <i class="s-ico fas fa-robot"></i>
+              <h3 class="s-ttl">Chatbots Inteligentes</h3>
+              <p class="s-dsc">Automatiza la atención al cliente con IA. Chatbots disponibles 24/7 que responden, venden y generan leads por ti.</p>
+              <span class="s-badge"><i class="fas fa-bolt"></i> IA Activa 24/7</span>
+            </div>
+          </div>
+
+          <!-- Slide 4 — Mantenimiento -->
+          <div class="car-slide s4">
+            <div class="bg"></div>
+            <div class="orb" style="width:180px;height:180px;background:rgba(255,159,67,.12);top:-40px;right:-40px"></div>
+            <div class="slide-con">
+              <i class="s-ico fas fa-screwdriver-wrench"></i>
+              <h3 class="s-ttl">Mantenimiento Preventivo</h3>
+              <p class="s-dsc">Limpieza profunda, actualización de drivers, antivirus y optimización completa para que tu equipo rinda al máximo.</p>
+              <span class="s-badge"><i class="fas fa-shield-halved"></i> Protección Total</span>
+            </div>
+          </div>
+
+          <!-- Slide 5 — Cámaras de Seguridad -->
+          <div class="car-slide s5">
+            <div class="bg"></div>
+            <div class="orb" style="width:160px;height:160px;background:rgba(84,160,255,.12);bottom:-30px;left:-30px"></div>
+            <div class="slide-con">
+              <i class="s-ico fas fa-camera"></i>
+              <h3 class="s-ttl">Cámaras de Seguridad</h3>
+              <p class="s-dsc">Instalación profesional de sistemas CCTV para hogares y negocios. Monitoreo remoto desde tu celular las 24 horas.</p>
+              <span class="s-badge"><i class="fas fa-shield-halved"></i> Vigilancia 24/7</span>
+            </div>
+          </div>
+
+        </div><!-- /car-track -->
+
+        <!-- Controles del carrusel -->
+        <div class="car-ctrl">
+          <button class="car-btn" id="cPrev"><i class="fas fa-chevron-left"></i></button>
+          <div class="dots" id="cDots">
+            <span class="dot on" data-i="0"></span>
+            <span class="dot"    data-i="1"></span>
+            <span class="dot"    data-i="2"></span>
+            <span class="dot"    data-i="3"></span>
+            <span class="dot"    data-i="4"></span>
+          </div>
+          <button class="car-btn" id="cNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div><!-- /car-wrap -->
+
+    </div><!-- /hero-main -->
+  </div><!-- /hero-body -->
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ESTADÍSTICAS
+═══════════════════════════════════════════ -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-g">
+      <div class="stat-it rev">
+        <div class="stat-n" data-t="500">0</div>
+        <div class="stat-l">Equipos Reparados</div>
+      </div>
+      <div class="stat-it rev d1">
+        <div class="stat-n" data-t="100">0</div>
+        <div class="stat-l">Clientes Satisfechos</div>
+      </div>
+      <div class="stat-it rev d2">
+        <div class="stat-n" data-t="20">0</div>
+        <div class="stat-l">Sitios Web Creados</div>
+      </div>
+      <div class="stat-it rev d3">
+        <div class="stat-n" data-t="10">0</div>
+        <div class="stat-l">Años de Experiencia</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SERVICIOS
+═══════════════════════════════════════════ -->
+<section class="sec" id="servicios">
+  <div class="container">
+    <div class="sec-hd">
+      <div class="tag rev"><i class="fas fa-border-all"></i> Lo Que Ofrezco</div>
+      <h2 class="sec-title rev">Servicios <span class="grad-txt">Profesionales</span></h2>
+      <p class="sec-sub rev">Soluciones tecnológicas completas para personas y empresas, con garantía de calidad y soporte post-servicio incluido.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc-card rev d1">
+        <div class="svc-ico ic-b"><i class="fas fa-laptop-medical"></i></div>
+        <h3>Reparación de Equipos</h3>
+        <p>Diagnóstico y reparación de laptops, PCs y computadoras de todas las marcas con repuestos de calidad.</p>
+        <div class="feats">
+          <div class="feat"><i class="fas fa-check-circle"></i> Diagnóstico gratuito</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Garantía en la reparación</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Repuestos de calidad</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Entrega en 24–48 horas</div>
+        </div>
+        <div class="arr"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="svc-card rev d2">
+        <div class="svc-ico ic-t"><i class="fas fa-shield-halved"></i></div>
+        <h3>Mantenimiento Preventivo</h3>
+        <p>Limpieza física interna, actualización de software, eliminación de virus y optimización completa del sistema.</p>
+        <div class="feats">
+          <div class="feat"><i class="fas fa-check-circle"></i> Limpieza profunda de hardware</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Actualización de drivers</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Eliminación de malware</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Optimización del sistema</div>
+        </div>
+        <div class="arr"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="svc-card rev d3">
+        <div class="svc-ico ic-o"><i class="fas fa-microchip"></i></div>
+        <h3>Repotenciación</h3>
+        <p>Dale nueva vida a tu equipo con upgrades de RAM, SSD, tarjeta gráfica y procesador a precios accesibles.</p>
+        <div class="feats">
+          <div class="feat"><i class="fas fa-check-circle"></i> Ampliación de RAM</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Instalación de SSD</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Upgrade de tarjeta gráfica</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Asesoría personalizada</div>
+        </div>
+        <div class="arr"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="svc-card rev d1">
+        <div class="svc-ico ic-pu"><i class="fas fa-globe"></i></div>
+        <h3>Diseño de Páginas Web</h3>
+        <p>Sitios web modernos, responsivos y optimizados. Desde portafolios hasta tiendas en línea con panel admin.</p>
+        <div class="feats">
+          <div class="feat"><i class="fas fa-check-circle"></i> Diseño totalmente personalizado</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Optimización SEO incluida</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> 100% responsivo</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Panel de administración</div>
+        </div>
+        <div class="arr"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="svc-card rev d2">
+        <div class="svc-ico ic-pk"><i class="fas fa-robot"></i></div>
+        <h3>Chatbots con IA</h3>
+        <p>Automatiza tu negocio con chatbots inteligentes que atienden, responden y venden por ti las 24 horas.</p>
+        <div class="feats">
+          <div class="feat"><i class="fas fa-check-circle"></i> Integración con WhatsApp</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> IA conversacional avanzada</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Panel de estadísticas</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Soporte multi-plataforma</div>
+        </div>
+        <div class="arr"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="svc-card rev d3">
+        <div class="svc-ico ic-bl"><i class="fas fa-headset"></i></div>
+        <h3>Soporte Técnico</h3>
+        <p>Asistencia técnica remota y presencial para resolver cualquier problema de hardware o software rápidamente.</p>
+        <div class="feats">
+          <div class="feat"><i class="fas fa-check-circle"></i> Soporte remoto inmediato</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Visita a domicilio disponible</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Atención por WhatsApp</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Respuesta en menos de 1 hora</div>
+        </div>
+        <div class="arr"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+      <div class="svc-card rev d1">
+        <div class="svc-ico ic-t"><i class="fas fa-camera"></i></div>
+        <h3>Cámaras de Seguridad CCTV</h3>
+        <p>Instalación profesional de sistemas de videovigilancia para hogares y negocios con acceso remoto desde tu celular.</p>
+        <div class="feats">
+          <div class="feat"><i class="fas fa-check-circle"></i> Instalación en casa y negocio</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Monitoreo remoto 24/7</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Cámaras HD e infrarrojas</div>
+          <div class="feat"><i class="fas fa-check-circle"></i> Grabación y almacenamiento</div>
+        </div>
+        <div class="arr"><i class="fas fa-arrow-right"></i></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     PORTFOLIO
+═══════════════════════════════════════════ -->
+<section class="sec" id="portfolio">
+  <div class="container">
+    <div class="sec-hd">
+      <div class="tag rev"><i class="fas fa-briefcase"></i> Trabajos Realizados</div>
+      <h2 class="sec-title rev">Mi <span class="grad-txt">Portfolio</span></h2>
+      <p class="sec-sub rev">Una muestra de los proyectos y servicios realizados con éxito para mis clientes.</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="pf-filters rev">
+      <button class="f-btn on" data-f="all">Todos</button>
+      <button class="f-btn" data-f="reparacion">Reparación</button>
+      <button class="f-btn" data-f="web">Diseño Web</button>
+      <button class="f-btn" data-f="chatbot">Chatbots</button>
+      <button class="f-btn" data-f="mantenimiento">Mantenimiento</button>
+    </div>
+
+    <div class="pf-grid" id="pfGrid">
+
+      <div class="pf-card rev d1" data-c="web">
+        <div class="pf-thumb">
+          <img src="assets/images/project-imextec.png" alt="E-commerce Tienda de Electrónica" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div class="pf-ov">
+            <a href="https://edgarperez2.github.io/imextec-web/" target="_blank" rel="noopener noreferrer" class="ov-btn"><i class="fas fa-eye"></i> Ver Proyecto</a>
+          </div>
+        </div>
+        <div class="pf-info">
+          <div class="pf-cat">Diseño Web</div>
+          <h3>E-commerce para Tienda de Electronica</h3>
+          <p>Tienda online completa con carrito de compras, pagos en línea y panel administrativo.</p>
+        </div>
+      </div>
+
+      <div class="pf-card rev d2" data-c="chatbot">
+        <div class="pf-thumb" style="background:linear-gradient(135deg,#0a2e2e,#0a4040)">
+          <i class="ti fas fa-comments" style="color:#00f5a0"></i>
+          <div class="pf-ov"><span class="ov-btn"><i class="fas fa-eye"></i> Ver Proyecto</span></div>
+        </div>
+        <div class="pf-info">
+          <div class="pf-cat">Chatbot</div>
+          <h3>Bot de Atención 24/7 para Restaurante</h3>
+          <p>Chatbot integrado en WhatsApp y web con pedidos automatizados y confirmaciones al instante.</p>
+        </div>
+      </div>
+
+      <div class="pf-card rev d3" data-c="reparacion">
+        <div class="pf-thumb">
+          <img src="assets/images/reparacion-pantalla.jpg" alt="Reparación de Notebook — Cambio de Pantalla"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div class="pf-ov">
+            <span class="ov-btn" onclick="openImgModal('assets/images/reparacion-pantalla.jpg')">
+              <i class="fas fa-eye"></i> Ver Imagen
+            </span>
+          </div>
+        </div>
+        <div class="pf-info">
+          <div class="pf-cat">Reparación</div>
+          <h3>Reparación de Notebook — Cambio de Pantalla</h3>
+          <p>Sustitución exitosa de pantalla rota en notebook, restaurando imagen nítida y funcionalidad completa del equipo.</p>
+        </div>
+      </div>
+
+      <div class="pf-card rev d1" data-c="web">
+        <div class="pf-thumb">
+          <img src="assets/images/project-bomberos.png" alt="Web Corporativa Bomberos" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div class="pf-ov">
+            <a href="https://edgarperez2.github.io/Pagina-de-Bomberos/" target="_blank" rel="noopener noreferrer" class="ov-btn"><i class="fas fa-eye"></i> Ver Proyecto</a>
+          </div>
+        </div>
+        <div class="pf-info">
+          <div class="pf-cat">Diseño Web</div>
+          <h3>Web Corporativa — Organización de Bomberos</h3>
+          <p>Sitio web corporativo con el objetivo de difundir información y servicios de donaciones para los bomberos.</p>
+        </div>
+      </div>
+
+      <div class="pf-card rev d2" data-c="mantenimiento">
+        <div class="pf-thumb">
+          <img src="assets/images/mantenimiento-gamer.jpg" alt="Mantenimiento PC Gamer"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div class="pf-ov">
+            <span class="ov-btn" onclick="openImgModal('assets/images/mantenimiento-gamer.jpg')">
+              <i class="fas fa-eye"></i> Ver Imagen
+            </span>
+          </div>
+        </div>
+        <div class="pf-info">
+          <div class="pf-cat">Mantenimiento</div>
+          <h3>Mantenimiento PC Gamer</h3>
+          <p>Limpieza profunda, cambio de pasta térmica y optimización de refrigeración en todo tipo de equipos de computación para un rendimiento máximo.</p>
+        </div>
+      </div>
+
+      <div class="pf-card rev d3" data-c="web">
+        <div class="pf-thumb">
+          <img src="assets/images/project-extintor-pro.png" alt="Extintor Pro SaaS"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+          <div class="pf-ov">
+            <span class="ov-btn" style="opacity:.7;cursor:default">
+              <i class="fas fa-clock"></i> Próximamente
+            </span>
+          </div>
+        </div>
+        <div class="pf-info">
+          <div class="pf-cat">Diseño Web</div>
+          <h3>Extintor Pro — Plataforma SaaS</h3>
+          <p>Sistema de gestión para empresas de extintores: clientes, inspecciones, vencimientos y facturación en la nube.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIOS
+═══════════════════════════════════════════ -->
+<section class="sec" id="testimonios">
+  <div class="container">
+    <div class="sec-hd">
+      <div class="tag rev"><i class="fas fa-star"></i> Lo Que Dicen</div>
+      <h2 class="sec-title rev">Testimonios de <span class="grad-txt">Clientes</span></h2>
+      <p class="sec-sub rev">La satisfacción de mis clientes es mi mayor logro. Esto es lo que dicen sobre mi trabajo.</p>
+    </div>
+
+    <div class="test-wrap rev">
+      <div class="test-track" id="tTrack">
+
+        <div class="test-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="test-txt">"Llevé mi laptop que parecía completamente muerta. En menos de 24 horas la tenía lista y funcionando mejor que cuando era nueva. Servicio increíble, muy profesional y a un precio súper justo."</p>
+          <div class="test-auth">
+            <div class="auth-av">MG</div>
+            <div><div class="auth-name">María González</div><div class="auth-pos">Diseñadora Gráfica</div></div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="test-txt">"Nos creó la página web de nuestra empresa y quedamos encantados. Muy moderna, rápida y con todo lo que necesitábamos. Ya llegaron varios clientes a través del sitio. 100% recomendado."</p>
+          <div class="test-auth">
+            <div class="auth-av">CR</div>
+            <div><div class="auth-name">Carlos Rodríguez</div><div class="auth-pos">CEO, LogisTech S.A.</div></div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="test-txt">"El chatbot implementado para nuestras ventas ha sido una revolución total. Atendemos clientes a las 3am sin que nadie esté despierto. Las ventas aumentaron un 40% en el primer mes."</p>
+          <div class="test-auth">
+            <div class="auth-av">AL</div>
+            <div><div class="auth-name">Ana López</div><div class="auth-pos">Propietaria de Tienda Online</div></div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p class="test-txt">"Realizó el mantenimiento preventivo de todos los equipos de nuestra oficina. El rendimiento mejoró notablemente y no hemos tenido ninguna falla desde entonces. Muy puntual y profesional."</p>
+          <div class="test-auth">
+            <div class="auth-av">JM</div>
+            <div><div class="auth-name">Jorge Martínez</div><div class="auth-pos">Gerente IT, Empresa Financiera</div></div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="test-txt">"Repotenciaron mi PC con más RAM y un SSD y parece una computadora nueva. Lo que antes tardaba 5 minutos en iniciar ahora lo hace en 15 segundos. ¡Una inversión que valió totalmente la pena!"</p>
+          <div class="test-auth">
+            <div class="auth-av">SP</div>
+            <div><div class="auth-name">Sofía Pérez</div><div class="auth-pos">Estudiante Universitaria</div></div>
+          </div>
+        </div>
+
+      </div><!-- /test-track -->
+    </div><!-- /test-wrap -->
+
+    <div class="test-nav">
+      <button class="car-btn" id="tPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="car-btn" id="tNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACTO
+═══════════════════════════════════════════ -->
+<section class="sec" id="contacto">
+  <div class="container">
+    <div class="sec-hd">
+      <div class="tag rev"><i class="fas fa-envelope"></i> Contáctame</div>
+      <h2 class="sec-title rev">Hablemos de tu <span class="grad-txt">Proyecto</span></h2>
+      <p class="sec-sub rev">¿Tienes un equipo dañado o un proyecto en mente? Escríbeme y te respondo en menos de 1 hora.</p>
+    </div>
+
+    <div class="ct-wrap">
+
+      <!-- Datos de contacto -->
+      <div class="rev-l">
+        <div class="ct-items">
+          <div class="ct-item">
+            <div class="ct-ico"><i class="fab fa-whatsapp"></i></div>
+            <div><div class="ct-lbl">WhatsApp</div>
+              <div class="ct-val"><a href="https://wa.me/56966870240" target="_blank" rel="noopener noreferrer" style="color:inherit">+56 9 6687 0240</a></div>
+            </div>
+          </div>
+          <div class="ct-item">
+            <div class="ct-ico"><i class="fas fa-envelope"></i></div>
+            <div><div class="ct-lbl">Email</div>
+              <div class="ct-val"><a href="mailto:pp.compured@gmail.com" style="color:inherit">pp.compured@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="ct-item">
+            <div class="ct-ico"><i class="fas fa-location-dot"></i></div>
+            <div><div class="ct-lbl">Ubicación</div><div class="ct-val">Talca, Chile</div></div>
+          </div>
+          <div class="ct-item">
+            <div class="ct-ico"><i class="fas fa-clock"></i></div>
+            <div><div class="ct-lbl">Horario de Atención</div><div class="ct-val">Lun – Sáb: 10:00 AM – 7:00 PM</div></div>
+          </div>
+        </div>
+
+        <!-- Por qué elegirme -->
+        <div class="sb-card">
+          <h4><i class="fas fa-trophy"></i> ¿Por qué elegirme?</h4>
+          <div class="svc-li"><span class="ico" style="color:var(--ok)"><i class="fas fa-check"></i></span>Garantía en todos los servicios</div>
+          <div class="svc-li"><span class="ico" style="color:var(--ok)"><i class="fas fa-check"></i></span>Presupuesto sin compromiso</div>
+          <div class="svc-li"><span class="ico" style="color:var(--ok)"><i class="fas fa-check"></i></span>Atención 100% personalizada</div>
+          <div class="svc-li"><span class="ico" style="color:var(--ok)"><i class="fas fa-check"></i></span>Más de 10 años de experiencia</div>
+          <div class="svc-li"><span class="ico" style="color:var(--ok)"><i class="fas fa-check"></i></span>Soporte post-servicio incluido</div>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="ct-form rev-r">
+        <h3>Envíame un Mensaje</h3>
+        <form id="cForm" onsubmit="fSub(event)">
+          <div class="f-row">
+            <div class="f-grp">
+              <label>Nombre *</label>
+              <input type="text" name="nombre" class="f-ctrl" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="f-grp">
+              <label>Teléfono</label>
+              <input type="tel" name="telefono" class="f-ctrl" placeholder="+56 9-0000-0000">
+            </div>
+          </div>
+          <div class="f-grp">
+            <label>Email *</label>
+            <input type="email" name="email" class="f-ctrl" placeholder="tu@email.com" required>
+          </div>
+          <div class="f-grp">
+            <label>Servicio de Interés</label>
+            <select name="servicio" class="f-ctrl">
+              <option value="">Selecciona un servicio...</option>
+              <option>Reparación de Equipos</option>
+              <option>Mantenimiento Preventivo</option>
+              <option>Repotenciación</option>
+              <option>Diseño de Página Web</option>
+              <option>Chatbot con IA</option>
+              <option>Soporte Técnico</option>
+              <option>Cámaras de Seguridad CCTV</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="f-grp">
+            <label>Mensaje *</label>
+            <textarea name="mensaje" class="f-ctrl" placeholder="Cuéntame sobre tu equipo o proyecto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-p f-sub">
+            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+          </button>
+          <div class="ok-msg" id="okMsg">
+            <i class="fas fa-circle-check"></i> ¡Mensaje enviado! Te contactaré a la brevedad.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="foot-g">
+
+      <div class="foot-brand">
+        <a href="#inicio" class="logo">
+          <svg viewBox="130 45 260 105" xmlns="http://www.w3.org/2000/svg" style="height:50px;width:auto">
+            <text x="260" y="92" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="42" font-weight="700">
+              <tspan fill="#7a4a00">$ </tspan><tspan fill="#f5a623">&lt;P&amp;P/&gt;</tspan>
+            </text>
+            <rect x="362" y="61" width="13" height="29" fill="#f5a623">
+              <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+            </rect>
+            <text x="260" y="136" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="20">
+              <tspan fill="#8a2060">// </tspan><tspan fill="#ff4db8" letter-spacing="3">COMPURED</tspan>
+            </text>
+          </svg>
+        </a>
+        <p>P&amp;P Compured — Servicios tecnológicos profesionales para personas y empresas. Reparación, mantenimiento, diseño web y chatbots con garantía de calidad.</p>
+        <div class="soc-row" style="justify-content:flex-start">
+          <a href="https://wa.me/56966870240" target="_blank" rel="noopener noreferrer" class="soc-a"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="soc-a"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-a"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="soc-a"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Servicios</h4>
+        <ul class="foot-links">
+          <li><a href="#servicios">Reparación de Equipos</a></li>
+          <li><a href="#servicios">Mantenimiento Preventivo</a></li>
+          <li><a href="#servicios">Repotenciación</a></li>
+          <li><a href="#servicios">Diseño Web</a></li>
+          <li><a href="#servicios">Chatbots con IA</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Navegación</h4>
+        <ul class="foot-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Contacto</h4>
+        <ul class="foot-links">
+          <li><a href="https://wa.me/56966870240" target="_blank" rel="noopener noreferrer">+56 9-6687-0240</a></li>
+          <li><a href="mailto:pp.compured@gmail.com">pp.compured@gmail.com</a></li>
+          <li><a href="#">Talca, Chile</a></li>
+        </ul>
+        <div style="margin-top:14px">
+          <a href="#contacto" class="btn btn-p" style="padding:10px 18px;font-size:.82rem">
+            <i class="fas fa-paper-plane"></i> Cotizar Ahora
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /foot-g -->
+
+    <div class="foot-bot">
+      <p>© 2026 P&amp;P Compured. Todos los derechos reservados.</p>
+      <p>Hecho con <i class="fas fa-heart" style="color:#ff6b6b"></i> para mis clientes</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     SCRIPTS — en orden de dependencia
+═══════════════════════════════════════════ -->
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/carousel.js"></script>
+<script src="assets/js/testimonials.js"></script>
+<script src="assets/js/portfolio.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/typing.js"></script>
+<script src="assets/js/form.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/modal.js"></script>
+
+<!-- ── Modal imagen neón ── -->
+<div class="img-modal" id="imgModal" onclick="closeImgModal()">
+  <div class="img-modal-box" onclick="event.stopPropagation()">
+    <button class="img-modal-close" onclick="closeImgModal()">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="modalImg" src="" alt="Vista del proyecto">
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* ==========================================================
+   RESPONSIVE.CSS — Media queries y diseño adaptativo
+   ========================================================== */
+
+/* ---- Tablet grande / Desktop pequeño (≤ 1024px) ---- */
+@media (max-width: 1024px) {
+  .sidebar       { width: 270px; }
+  .test-card     { flex: 0 0 calc(50% - 11px); }
+  .foot-g        { grid-template-columns: 1fr 1fr; }
+  .stats-g       { grid-template-columns: repeat(2, 1fr); }
+  .stat-it::after { display: none; }
+}
+
+/* ---- Tablet (≤ 768px) ---- */
+@media (max-width: 768px) {
+  /* Navbar: ocultar links y mostrar hamburguesa */
+  .nav-links          { display: none; }
+  .nav-act .btn-p     { display: none; }
+  .nav-tog            { display: block; }
+
+  /* Hero: apilar sidebar y contenido */
+  .hero-body  { flex-direction: column; }
+  .sidebar    { width: 100%; }
+
+  /* Carrusel más compacto */
+  .car-slide  { height: 270px; }
+
+  /* Contacto: una sola columna */
+  .ct-wrap    { grid-template-columns: 1fr; }
+  .f-row      { grid-template-columns: 1fr; }
+
+  /* Footer: una sola columna */
+  .foot-g     { grid-template-columns: 1fr; }
+
+  /* Testimonios: una tarjeta por vez */
+  .test-card  { flex: 0 0 100%; }
+
+  /* Stats: 2 columnas */
+  .stats-g    { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- Móvil (≤ 480px) ---- */
+@media (max-width: 480px) {
+  .sec        { padding: 60px 0; }
+  .pf-grid    { grid-template-columns: 1fr; }
+  .hero-btns  { flex-direction: column; }
+  .svc-grid   { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,224 @@
+/* ==========================================================
+   SIDEBAR.CSS — Sidebar del hero (perfil, skills, servicios)
+   ========================================================== */
+
+/* ---- Contenedor del sidebar ---- */
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 0;
+}
+
+/* ---- Tarjeta base del sidebar ---- */
+.sb-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 22px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea degradada en la parte superior */
+.sb-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--grad);
+}
+
+/* ---- Tarjeta de perfil ---- */
+.sb-card.profile {
+  text-align: center;
+}
+
+/* Avatar con borde animado giratorio */
+.avatar {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  margin: 0 auto 14px;
+  background: var(--grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.avatar::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: var(--grad);
+  z-index: -1;
+  animation: spin 4s linear infinite;
+}
+
+/* Badge de disponibilidad */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 245, 160, 0.1);
+  border: 1px solid rgba(0, 245, 160, 0.2);
+  color: var(--ok);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ok);
+  animation: pulse 2s infinite;
+}
+
+.prof-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.prof-role {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* Estadísticas del perfil */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.st-n {
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.st-l {
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+/* ---- Encabezado de tarjetas ---- */
+.sb-card h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.sb-card h4 i {
+  color: var(--p);
+}
+
+/* ---- Barras de habilidades ---- */
+.sk-item {
+  margin-bottom: 11px;
+}
+
+.sk-hd {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.sk-bar {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.sk-fill {
+  height: 100%;
+  background: var(--grad);
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Lista de servicios ---- */
+.svc-li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.svc-li:last-child {
+  border-bottom: none;
+}
+
+.svc-li .ico {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: var(--gcard);
+  border: 1px solid rgba(0, 198, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--p);
+  flex-shrink: 0;
+}
+
+/* ---- Redes sociales ---- */
+.soc-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.soc-a {
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  color: var(--muted);
+  transition: var(--t);
+}
+
+.soc-a:hover {
+  color: var(--p);
+  border-color: var(--p);
+  transform: translateY(-2px);
+}

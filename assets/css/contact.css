@@ -1,0 +1,197 @@
+/* ==========================================================
+   CONTACT.CSS — Sección de contacto y formulario
+   ========================================================== */
+
+#contacto {
+  background: var(--bg);
+  position: relative;
+}
+
+/* Orb de fondo decorativo */
+#contacto::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 350px;
+  background: radial-gradient(ellipse, rgba(124, 58, 237, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+/* ---- Layout de dos columnas ---- */
+.ct-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 44px;
+  align-items: start;
+}
+
+/* ---- Columna de información ---- */
+.ct-info h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.ct-info p {
+  color: var(--muted);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+/* ---- Items de contacto ---- */
+.ct-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.ct-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  transition: var(--t);
+}
+
+.ct-item:hover {
+  border-color: rgba(0, 198, 255, 0.3);
+}
+
+.ct-ico {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: var(--grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.ct-lbl {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1px;
+}
+
+.ct-val {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+/* ---- Formulario ---- */
+.ct-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ct-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--grad);
+}
+
+.ct-form h3 {
+  margin-bottom: 22px;
+  font-size: 1.2rem;
+}
+
+/* ---- Fila de dos campos ---- */
+.f-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ---- Grupo de campo ---- */
+.f-grp {
+  margin-bottom: 18px;
+}
+
+.f-grp label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* ---- Control base (input / textarea / select) ---- */
+.f-ctrl {
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--rs);
+  color: var(--txt);
+  font-family: inherit;
+  font-size: 0.88rem;
+  transition: var(--t);
+  outline: none;
+}
+
+.f-ctrl:focus {
+  border-color: var(--p);
+  box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.1);
+}
+
+.f-ctrl::placeholder {
+  color: var(--muted);
+}
+
+textarea.f-ctrl {
+  resize: vertical;
+  min-height: 112px;
+}
+
+/* Select con flecha personalizada */
+select.f-ctrl {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238892a4' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+select.f-ctrl option {
+  background: var(--bg2);
+}
+
+/* ---- Botón submit ---- */
+.f-sub {
+  width: 100%;
+  padding: 14px;
+  font-size: 0.95rem;
+}
+
+/* ---- Mensaje de éxito ---- */
+.ok-msg {
+  display: none;
+  text-align: center;
+  padding: 16px;
+  background: rgba(0, 245, 160, 0.08);
+  border: 1px solid rgba(0, 245, 160, 0.2);
+  border-radius: var(--rs);
+  color: var(--ok);
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

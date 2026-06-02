@@ -1,0 +1,139 @@
+/* ==========================================================
+   SERVICES.CSS — Sección de servicios
+   ========================================================== */
+
+#servicios {
+  background: var(--bg2);
+  position: relative;
+}
+
+/* Línea de acento en la parte superior */
+#servicios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--p), transparent);
+}
+
+/* ---- Grid de servicios ---- */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 22px;
+}
+
+/* ---- Tarjeta de servicio ---- */
+.svc-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 28px;
+  transition: var(--t);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Línea de acento superior (aparece en hover) */
+.svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--grad);
+  transform: scaleX(0);
+  transition: var(--t);
+}
+
+.svc-card:hover {
+  border-color: rgba(0, 198, 255, 0.2);
+  transform: translateY(-4px);
+  background: var(--card-h);
+  box-shadow: var(--shadow);
+}
+
+.svc-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ---- Icono del servicio ---- */
+.svc-ico {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+/* Variantes de color para el icono */
+.ic-b  { background: rgba(0,   198, 255, 0.12); color: #00c6ff; }
+.ic-t  { background: rgba(0,   245, 160, 0.12); color: #00f5a0; }
+.ic-o  { background: rgba(255, 159,  67, 0.12); color: #ff9f43; }
+.ic-pu { background: rgba(124,  58, 237, 0.12); color: #a855f7; }
+.ic-pk { background: rgba(255, 100, 200, 0.12); color: #ff64c8; }
+.ic-bl { background: rgba(84,  160, 255, 0.12); color: #54a0ff; }
+
+/* ---- Contenido de la tarjeta ---- */
+.svc-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.svc-card p {
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+/* ---- Lista de características ---- */
+.feats {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.feat {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.81rem;
+  color: var(--muted);
+}
+
+.feat i {
+  color: var(--p);
+  font-size: 0.72rem;
+}
+
+/* ---- Flecha decorativa (hover) ---- */
+.arr {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  transition: var(--t);
+  color: var(--muted);
+}
+
+.svc-card:hover .arr {
+  border-color: var(--p);
+  color: var(--p);
+  transform: rotate(45deg);
+}

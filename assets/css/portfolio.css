@@ -1,0 +1,141 @@
+/* ==========================================================
+   PORTFOLIO.CSS — Sección de trabajos realizados
+   ========================================================== */
+
+#portfolio {
+  background: var(--bg);
+}
+
+/* ---- Filtros ---- */
+.pf-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.f-btn {
+  padding: 7px 18px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.83rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--t);
+  font-family: inherit;
+}
+
+.f-btn.on,
+.f-btn:hover {
+  background: var(--grad);
+  border-color: transparent;
+  color: #fff;
+}
+
+/* ---- Grid de portfolio ---- */
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+/* ---- Tarjeta de proyecto ---- */
+.pf-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: var(--t);
+  cursor: pointer;
+}
+
+.pf-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 198, 255, 0.22);
+  box-shadow: var(--shadow);
+}
+
+/* ---- Thumbnail del proyecto ---- */
+.pf-thumb {
+  height: 190px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pf-thumb .ti {
+  font-size: 3.2rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 16px currentColor);
+  transition: var(--t);
+}
+
+.pf-card:hover .ti {
+  transform: scale(1.1);
+}
+
+/* Overlay con botón al hacer hover */
+.pf-ov {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--t);
+}
+
+.pf-card:hover .pf-ov {
+  opacity: 1;
+}
+
+.ov-btn {
+  padding: 9px 18px;
+  border-radius: 50px;
+  background: #fff;
+  color: var(--bg);
+  font-weight: 600;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.ov-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);
+}
+
+/* ---- Información del proyecto ---- */
+.pf-info {
+  padding: 18px;
+}
+
+.pf-cat {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--p);
+  margin-bottom: 7px;
+}
+
+.pf-info h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.pf-info p {
+  font-size: 0.83rem;
+  color: var(--muted);
+}

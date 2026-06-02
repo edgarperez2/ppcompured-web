@@ -1,0 +1,106 @@
+/* ==========================================================
+   HERO.CSS — Sección hero principal
+   ========================================================== */
+
+/* ---- Contenedor hero ---- */
+.hero {
+  min-height: 100vh;
+  padding-top: var(--nav);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cuadrícula de fondo decorativa */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Orbs decorativos de fondo */
+.hero-orb1 {
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.14), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-orb2 {
+  position: absolute;
+  bottom: -15%;
+  left: -8%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(0, 198, 255, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+/* ---- Layout interno del hero ---- */
+.hero-body {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 36px 24px;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Columna principal derecha ---- */
+.hero-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px 0;
+  min-width: 0;
+}
+
+.hero-txt {
+  max-width: 580px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 198, 255, 0.08);
+  border: 1px solid rgba(0, 198, 255, 0.2);
+  color: var(--p);
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.hero-h {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}

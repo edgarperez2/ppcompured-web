@@ -1,0 +1,86 @@
+/* ==========================================================
+   BASE.CSS — Variables CSS, reset y estilos base
+   ========================================================== */
+
+/* ---- Custom Properties ---- */
+:root {
+  /* Colores de fondo */
+  --bg:          #050508;
+  --bg2:         #0d0d1a;
+
+  /* Colores de tarjeta */
+  --card:        rgba(255, 255, 255, 0.04);
+  --card-h:      rgba(255, 255, 255, 0.08);
+
+  /* Colores de acento */
+  --p:           #00c6ff;   /* primario  — cyan  */
+  --s:           #7c3aed;   /* secundario — violeta */
+  --acc:         #ff6b35;   /* acento    — naranja  */
+  --ok:          #00f5a0;   /* éxito     — verde    */
+
+  /* Tipografía */
+  --txt:         #f0f4ff;
+  --muted:       #8892a4;
+
+  /* Bordes */
+  --border:      rgba(255, 255, 255, 0.08);
+
+  /* Gradientes */
+  --grad:        linear-gradient(135deg, #00c6ff, #7c3aed);
+  --gcard:       linear-gradient(135deg, rgba(0, 198, 255, 0.1), rgba(124, 58, 237, 0.1));
+
+  /* Sombra */
+  --shadow:      0 8px 32px rgba(0, 0, 0, 0.45);
+
+  /* Radios */
+  --r:           16px;
+  --rs:          8px;
+
+  /* Transición global */
+  --t:           all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Altura del navbar */
+  --nav:         70px;
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--txt);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--t);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- Scrollbar personalizada ---- */
+::-webkit-scrollbar         { width: 5px; }
+::-webkit-scrollbar-track   { background: var(--bg); }
+::-webkit-scrollbar-thumb   { background: var(--s); border-radius: 3px; }

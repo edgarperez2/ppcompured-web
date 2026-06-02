@@ -1,0 +1,176 @@
+/* ==========================================================
+   CAROUSEL.CSS — Carrusel de servicios del hero
+   ========================================================== */
+
+/* ---- Contenedor del carrusel ---- */
+.car-wrap {
+  border-radius: var(--r);
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.car-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Slide individual ---- */
+.car-slide {
+  min-width: 100%;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Fondo de cada slide */
+.car-slide .bg {
+  position: absolute;
+  inset: 0;
+}
+
+.s1 .bg {
+  background:
+    linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.52)),
+    url('../images/carousel/slide-reparacion.png') center/cover no-repeat;
+}
+.s2 .bg {
+  background:
+    linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.52)),
+    url('../images/carousel/slide-web.jpg') center/cover no-repeat;
+}
+.s3 .bg {
+  background:
+    linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.52)),
+    url('../images/carousel/slide-chatbot.png') center/cover no-repeat;
+}
+.s4 .bg {
+  background:
+    linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.52)),
+    url('../images/carousel/slide-mantenimiento.png') center/cover no-repeat;
+}
+.s5 .bg {
+  background:
+    linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.52)),
+    url('../images/carousel/slide-camaras.png') center/cover no-repeat;
+}
+
+/* Orb decorativo dentro del slide */
+.car-slide .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* Contenido sobre el fondo */
+.slide-con {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Icono del slide ---- */
+.s-ico {
+  font-size: 3.8rem;
+  margin-bottom: 18px;
+  display: block;
+  filter: drop-shadow(0 0 18px currentColor);
+}
+
+.s1 .s-ico { color: #00c6ff; }
+.s2 .s-ico { color: #a855f7; }
+.s3 .s-ico { color: #00f5a0; }
+.s4 .s-ico { color: #ff9f43; }
+.s5 .s-ico { color: #54a0ff; }
+
+/* ---- Texto del slide ---- */
+.s-ttl {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 9px;
+  text-shadow: 0 2px 8px rgba(0,0,0,.8);
+}
+
+.s-dsc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
+  max-width: 380px;
+  margin: 0 auto 18px;
+  line-height: 1.6;
+  text-shadow: 0 1px 6px rgba(0,0,0,.8);
+}
+
+/* ---- Badge del slide ---- */
+.s-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.77rem;
+  font-weight: 600;
+  border: 1px solid currentColor;
+}
+
+.s1 .s-badge { color: #00c6ff; background: rgba(0,   198, 255, 0.1); }
+.s2 .s-badge { color: #a855f7; background: rgba(168,  85, 247, 0.1); }
+.s3 .s-badge { color: #00f5a0; background: rgba(0,   245, 160, 0.1); }
+.s4 .s-badge { color: #ff9f43; background: rgba(255, 159,  67, 0.1); }
+.s5 .s-badge { color: #54a0ff; background: rgba(84,  160, 255, 0.1); }
+
+/* ---- Controles del carrusel ---- */
+.car-ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid var(--border);
+}
+
+.car-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--txt);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--t);
+  font-size: 0.8rem;
+}
+
+.car-btn:hover {
+  border-color: var(--p);
+  color: var(--p);
+}
+
+/* ---- Dots de navegación ---- */
+.dots {
+  display: flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: var(--t);
+}
+
+.dot.on {
+  background: var(--p);
+  width: 22px;
+  border-radius: 4px;
+}

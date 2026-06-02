@@ -1,0 +1,118 @@
+/* ==========================================================
+   TESTIMONIALS.CSS — Sección de testimonios de clientes
+   ========================================================== */
+
+#testimonios {
+  background: var(--bg2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea de acento superior */
+#testimonios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--s), transparent);
+}
+
+/* ---- Slider ---- */
+.test-wrap {
+  overflow: hidden;
+}
+
+.test-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 22px;
+}
+
+/* ---- Tarjeta de testimonio ---- */
+.test-card {
+  flex: 0 0 calc(33.333% - 15px);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 26px;
+  position: relative;
+}
+
+/* Comilla decorativa de fondo */
+.test-card::before {
+  content: '"';
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 4.5rem;
+  line-height: 1;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.25;
+  font-family: Georgia, serif;
+}
+
+/* ---- Estrellas ---- */
+.stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.stars i {
+  color: #ffd700;
+  font-size: 0.82rem;
+}
+
+/* ---- Texto del testimonio ---- */
+.test-txt {
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+/* ---- Autor ---- */
+.test-auth {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.auth-av {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.auth-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.auth-pos {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ---- Navegación del slider ---- */
+.test-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
