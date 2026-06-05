@@ -87,6 +87,18 @@
   animation: pulse 2s infinite;
 }
 
+/* Estado fuera de horario */
+.status-badge.off {
+  background: rgba(255, 99, 99, 0.1);
+  border-color: rgba(255, 99, 99, 0.2);
+  color: #ff6363;
+}
+
+.status-badge.off .status-dot {
+  background: #ff6363;
+  animation: none;
+}
+
 .prof-name {
   font-size: 1.1rem;
   font-weight: 700;
